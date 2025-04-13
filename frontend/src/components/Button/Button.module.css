@@ -1,0 +1,67 @@
+.button {
+  border: none;
+  padding: 1.2rem 3rem;
+  border-radius: 1.5rem;
+  font-size: 1.6rem;
+  background-color: var(--yellow-color);
+  color: var(--primary-color);
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.button:active {
+  transform: scale(1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--yellow-color);
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.button-primary {
+  background-color: var(--yellow-color);
+  color: var(--primary-color);
+}
+
+.button-secondary {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+}
+
+.button-danger {
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+
+.delete {
+  font-size: 3.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in;
+  color: var(--red-color);
+}
+
+.delete:hover {
+  background-color: rgba(233, 62, 62, 0.1);
+  transform: scale(1.1);
+}

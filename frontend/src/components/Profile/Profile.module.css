@@ -1,0 +1,129 @@
+.container {
+  position: relative;
+  font-family: var(--font-family);
+}
+
+.avatar {
+  width: 5rem;
+  box-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  border-radius: 100rem;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.avatar:hover {
+  transform: scale(1.05);
+}
+
+.email {
+  display: none;
+  font-weight: 500;
+  color: var(--white-color);
+}
+
+.dropdownIcon {
+  display: none;
+  color: var(--white-color);
+}
+
+@media screen and (min-width: 600px) {
+  .profile {
+    display: flex;
+    align-items: center;
+    border-radius: 100rem;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.25s ease-in-out;
+  }
+
+  .profile:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .avatar {
+    width: 2.8rem;
+    margin-right: 1rem;
+  }
+
+  .email {
+    display: inline;
+    font-size: 1.3rem;
+    margin-right: 0.5rem;
+  }
+
+  .dropdownIcon {
+    display: inline;
+    font-size: 2rem;
+    margin-right: 0.5rem;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  right: 0;
+  margin-top: 1rem;
+  width: 28rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem 0;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.dropdown.show {
+  display: flex;
+}
+
+.dropdown .username {
+  font-weight: 600;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #eee;
+  color: #222;
+}
+
+.dropdown .username .avatar {
+  width: 2.8rem;
+  height: 2.8rem;
+  margin-right: 1rem;
+}
+
+.dropdown > .menuItem {
+  padding: 1.3rem 2rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.dropdown > .menuItem:hover {
+  background-color: #f8f9fa;
+}
+
+.dropdown .icon {
+  margin-right: 1.2rem;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
